@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
 
@@ -10,14 +10,29 @@ const initialState = {
 };
 
 export const ContextProvider = ({ children }) => {
-    const [activeMenu, setActiveMenu] = useState(true);
+  const [activeMenu, setActiveMenu] = useState(true);
+  const [isClicked, setiIsClicked] = useState(initialState);
+  const [screenSize, setScreenSize] = useState(undefined);
 
+  const handleClick = (clicked) => {
+    setiIsClicked({ ...initialState, [clicked]: true });
+  };
 
-    return (
-        <StateContext.Provider value={{activeMenu, setActiveMenu, }}>
-          {children}
-        </StateContext.Provider>
-      );
-    };
-    
-    export const useStateContext = () => useContext(StateContext);
+  return (
+    <StateContext.Provider
+      value={{
+        activeMenu,
+        setActiveMenu,
+        isClicked,
+        setiIsClicked,
+        handleClick,
+        screenSize,
+        setScreenSize,
+      }}
+    >
+      {children}
+    </StateContext.Provider>
+  );
+};
+
+export const useStateContext = () => useContext(StateContext);
