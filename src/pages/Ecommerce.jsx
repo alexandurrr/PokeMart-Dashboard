@@ -64,12 +64,12 @@ const Ecommerce = () => {
             <div className="flex items-center gap-4">
               <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                 <span>
-                  <BsDot />
+                  <BsDot style={{ fontSize: "48px" }} />
                 </span>
                 <span>Expense</span>
               </p>
               <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
-                <span>
+                <span style={{ fontSize: "48px" }}>
                   <BsDot />
                 </span>
                 <span>Budget</span>
