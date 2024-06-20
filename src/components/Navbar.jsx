@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
@@ -58,13 +58,21 @@ const Navbar = () => {
   }, [screenSize]);
 
   return (
-    <div className="flex justify-between p-2 md:mx-6 relative">
-      <NavButton
-        title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color={currentColor}
-        icon={<AiOutlineMenu />}
-      />
+    <div className="flex justify-between items-center p-2 md:mx-6 relative">
+      <div className="flex items-center">
+        <NavButton
+          title="Menu"
+          customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+          color={currentColor}
+          icon={<AiOutlineMenu />}
+        />
+        <NavButton
+          title="Search"
+          customFunc={() => onClick(() => {})}
+          color={currentColor}
+          icon={<AiOutlineSearch />}
+        />
+      </div>
 
       <div className="flex">
         <NavButton

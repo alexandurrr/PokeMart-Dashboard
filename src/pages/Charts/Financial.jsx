@@ -22,10 +22,8 @@ import { Header } from "../../components";
 
 const date1 = new Date("2017, 1, 1");
 
-// eslint-disable-next-line consistent-return
 function filterValue(value) {
   if (value.x >= date1) {
-    // eslint-disable-next-line no-sequences
     return value.x, value.high, value.low;
   }
 }
@@ -36,7 +34,7 @@ const Financial = () => {
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <Header category="Financial" title="AAPLE Historical" />
+      <Header category="Financial" title="Poké mart stocks historical" />
       <div className="w-full">
         <ChartComponent
           id="charts"
@@ -61,7 +59,7 @@ const Financial = () => {
               dataSource={returnValue}
               xName="x"
               yName="low"
-              name="Apple Inc"
+              name="Poké Mart Inc."
               type="Hilo"
               low="low"
               high="high"
