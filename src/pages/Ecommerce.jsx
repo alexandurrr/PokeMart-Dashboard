@@ -7,6 +7,7 @@ import {
   ecomPieChartData,
 } from "../data/dummy";
 import welcomeBg from "../data/welcome-bg.svg";
+import product6 from "../data/product6.jpg";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Ecommerce = () => {
@@ -120,6 +121,51 @@ const Ecommerce = () => {
             </div>
             <div>
               <Stacked width="320px" height="360px" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            className=" rounded-2xl md:w-400 p-4 m-3"
+            style={{ backgroundColor: currentColor }}
+          >
+            <div className="flex justify-between items-center ">
+              <p className="font-semibold text-white text-2xl">Earnings</p>
+
+              <div>
+                <p className="text-2xl text-white font-semibold mt-8">
+                  $70,335.12
+                </p>
+                <p className="text-gray-200">Monthly revenue</p>
+              </div>
+            </div>
+
+            <div className="mt-4">
+              <SparkLine
+                currentColor={currentColor}
+                id="column-sparkLine"
+                height="100px"
+                type="Column"
+                data={SparklineAreaData}
+                width="320"
+                color="rgb(242, 252, 253)"
+              />
+            </div>
+          </div>
+
+          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
+            <div>
+              <p className="text-2xl font-semibold ">$302,105</p>
+              <p className="text-gray-400">Yearly sales</p>
+            </div>
+
+            <div className="w-40">
+              <Pie
+                id="pie-chart"
+                data={ecomPieChartData}
+                legendVisiblity={false}
+                height="160px"
+              />
             </div>
           </div>
         </div>
