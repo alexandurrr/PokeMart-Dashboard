@@ -26,10 +26,7 @@ const ColorMapping = () => {
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <Header
-        category="Color Mappping"
-        title="USA CLIMATE - WEATHER BY MONTH"
-      />
+      <Header category="Color Mappping" title="Kanto Climate" />
       <div className="w-full">
         <ChartComponent
           id="charts"
@@ -43,7 +40,7 @@ const ColorMapping = () => {
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={colorMappingData[0]}
-              name="USA"
+              name="KAN"
               xName="x"
               yName="y"
               type="Column"
@@ -54,7 +51,6 @@ const ColorMapping = () => {
             />
           </SeriesCollectionDirective>
           <RangeColorSettingsDirective>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             {rangeColorMapping.map((item, index) => (
               <RangeColorSettingDirective key={index} {...item} />
             ))}
