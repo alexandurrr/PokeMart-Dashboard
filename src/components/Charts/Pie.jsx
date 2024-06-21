@@ -21,7 +21,7 @@ const Doughnut = ({ id, data, legendVisiblity, height }) => {
       legendSettings={{ visible: legendVisiblity, background: "white" }}
       height={height}
       background={currentMode === "Dark" ? "#33373E" : "#fff"}
-      tooltip={{ enable: true }}
+      tooltip={{ enable: true, format: "${point.x} : <b>${point.y}%</b>" }}
     >
       <Inject
         services={[
@@ -33,7 +33,7 @@ const Doughnut = ({ id, data, legendVisiblity, height }) => {
       />
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective
-          name="Sale"
+          name="Pokémon"
           dataSource={data}
           xName="x"
           yName="y"

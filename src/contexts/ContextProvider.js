@@ -16,6 +16,7 @@ export const ContextProvider = ({ children }) => {
   const [currentColor, setCurrentColor] = useState("#03C9D7");
   const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const setMode = (e) => {
     setCurrentMode(e.target.value);
@@ -31,6 +32,10 @@ export const ContextProvider = ({ children }) => {
 
   const handleClick = (clicked) =>
     setIsClicked({ ...initialState, [clicked]: true });
+
+  const togglePlayPause = () => {
+    setIsPlaying((prev) => !prev);
+  };
 
   return (
     <StateContext.Provider
@@ -48,6 +53,8 @@ export const ContextProvider = ({ children }) => {
         setThemeSettings,
         setMode,
         setColor,
+        isPlaying,
+        togglePlayPause,
       }}
     >
       {children}

@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
 import { RiNotification3Line } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import { FaPlay, FaPause, FaVolumeUp, FaVolumeDown } from "react-icons/fa";
 
 import avatar from "../data/avatar.jpg";
 import { Cart, Chat, Notification, UserProfile } from ".";
@@ -27,6 +28,23 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   </TooltipComponent>
 );
 
+const VolumeSlider = ({ volume, setVolume, color }) => (
+  <div className="flex items-center ml-4">
+    <FaVolumeDown style={{ color }} />
+    <input
+      type="range"
+      min="0"
+      max="1"
+      step="0.1"
+      value={volume}
+      onChange={(e) => setVolume(parseFloat(e.target.value))}
+      className="ml-2 mr-2"
+      style={{ width: "80px", color: color }}
+    />
+    <FaVolumeUp style={{ color }} />
+  </div>
+);
+
 const Navbar = () => {
   const {
     activeMenu,
@@ -37,7 +55,34 @@ const Navbar = () => {
     screenSize,
     setScreenSize,
     currentColor,
+    isPlaying,
+    togglePlayPause,
   } = useStateContext();
+
+  const [volume, setVolume] = useState(0.5); // Initial volume
+
+  const audioRef = useRef(new Audio("/backgroundsong.mp3"));
+
+  useEffect(() => {
+    audioRef.current.volume = volume; // Update volume when volume state changes
+  }, [volume]);
+
+  useEffect(() => {
+    audioRef.current.addEventListener("ended", () => togglePlayPause());
+    return () => {
+      audioRef.current.removeEventListener("ended", () => togglePlayPause());
+    };
+  }, [togglePlayPause]);
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play().catch((error) => {
+        console.error("Error playing audio:", error);
+      });
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -72,6 +117,19 @@ const Navbar = () => {
           color={currentColor}
           icon={<AiOutlineSearch />}
         />
+        <NavButton
+          title={isPlaying ? "Pause" : "Play"}
+          customFunc={togglePlayPause}
+          color={currentColor}
+          icon={isPlaying ? <FaPause /> : <FaPlay />}
+        />
+        {isPlaying && (
+          <VolumeSlider
+            volume={volume}
+            setVolume={setVolume}
+            color={currentColor}
+          />
+        )}
       </div>
 
       <div className="flex">
@@ -90,7 +148,7 @@ const Navbar = () => {
         />
         <NavButton
           title="Notifications"
-          dotColor="#03C9D7"
+          dotColor="rgb(254, 201, 15)"
           customFunc={() => handleClick("notification")}
           color={currentColor}
           icon={<RiNotification3Line />}
@@ -100,7 +158,11 @@ const Navbar = () => {
             className=" flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            <img className="rounded-full w-8 h-8" src={avatar} />
+            <img
+              className="rounded-full w-8 h-8"
+              src={avatar}
+              alt="User avatar"
+            />
             <p>
               <span className="text-gray-400 text-14">Hi, </span>{" "}
               <span className="text-gray-400 font-bold ml-1 text-14">Alex</span>
