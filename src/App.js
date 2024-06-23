@@ -1,9 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import { MdOutlineCancel } from "react-icons/md";
+import { IoIosChatbubbles } from "react-icons/io";
 
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import {
+  Navbar,
+  Footer,
+  Sidebar,
+  ThemeSettings,
+  Notification,
+  Chatbot,
+} from "./components";
 import {
   Ecommerce,
   Orders,
@@ -33,31 +42,41 @@ const App = () => {
     setThemeSettings,
     currentColor,
     currentMode,
+    showMainContainer,
+    setShowMainContainer,
   } = useStateContext();
 
   return (
     <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
-          <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
+          <div
+            className="fixed right-4 bottom-4 flex"
+            style={{ zIndex: "1000" }}
+          >
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
-                className="text-3xl p-3 
-                    hover:drop-shadow-xl 
-                    hover:bg-light-gray text-white"
+                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white"
                 onClick={() => setThemeSettings(true)}
                 style={{ background: currentColor, borderRadius: "50%" }}
               >
                 <FiSettings />
               </button>
             </TooltipComponent>
+            <TooltipComponent content="Open Chat" position="Top">
+              <button
+                type="button"
+                className="text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white ml-2"
+                onClick={() => setShowMainContainer(!showMainContainer)}
+                style={{ background: currentColor, borderRadius: "50%" }}
+              >
+                <IoIosChatbubbles />
+              </button>
+            </TooltipComponent>
           </div>
           {activeMenu ? (
-            <div
-              className="w-72 fixed sidebar
-                dark:bg-secondary-dark-bg bg-white"
-            >
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
               <Sidebar />
             </div>
           ) : (
@@ -66,20 +85,19 @@ const App = () => {
             </div>
           )}
           <div
-            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full
-             ${activeMenu ? "md:ml-72" : "flex-2"}`}
+            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${
+              activeMenu ? "md:ml-72" : "flex-2"
+            }`}
           >
-            <div
-              className="fixed md:static 
-                 bg-main-bg dark:bg-main-dark-bg 
-                 navbar w-full"
-            >
+            <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
 
-            <div>
-              {themeSettings && <ThemeSettings />}
+            {showMainContainer && <Chatbot />}
 
+            {themeSettings && <ThemeSettings />}
+
+            <div>
               <Routes>
                 {/* Dashboard route */}
                 <Route path="/" element={<Ecommerce />} />

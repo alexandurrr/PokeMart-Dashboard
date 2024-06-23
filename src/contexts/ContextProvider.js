@@ -17,6 +17,15 @@ export const ContextProvider = ({ children }) => {
   const [currentMode, setCurrentMode] = useState("Light");
   const [themeSettings, setThemeSettings] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showMainContainer, setShowMainContainer] = useState(false);
+  const [typing, setTyping] = useState(false);
+  const [messages, setMessages] = useState([
+    {
+      message: "hello i am chat gpt",
+      sender: "ChatGPT",
+      direction: "incoming",
+    },
+  ]);
 
   const setMode = (e) => {
     setCurrentMode(e.target.value);
@@ -55,6 +64,12 @@ export const ContextProvider = ({ children }) => {
         setColor,
         isPlaying,
         togglePlayPause,
+        messages,
+        setMessages,
+        typing,
+        setTyping,
+        showMainContainer,
+        setShowMainContainer,
       }}
     >
       {children}
