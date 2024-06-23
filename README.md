@@ -4,6 +4,7 @@ Welcome to the Pokémon Poke Mart Dashboard project! This dashboard is designed 
 
 ## Features
 
+- **Chatbot using gpt-4o:** Ash ketchum themed chatbot using the latest chat gpt version. Click the chat bubble icon on the bottom right to talk to him! :)
 - **Pages:**
   - Ecommerce Home Page
   - Orders Page
@@ -33,11 +34,15 @@ Welcome to the Pokémon Poke Mart Dashboard project! This dashboard is designed 
 - **React:** Frontend library for building user interfaces.
 - **Synfusion Charts & Apps:** Used for creating a variety of interactive charts and apps.
 - **Tailwind CSS:** Utility-first CSS framework for styling.
-
+- **OpenAI:** Integration for AI-powered features.
+- **Chatscope:** Component for interactive chat functionalities.
 ## Screenshots
 
 ### Homepage
 ![Homepage](screenshots/homepage.png)
+
+### Chatbot
+![Chatbot](screenshots/chatbot.png)
 
 ### Dark Mode (Pink)
 ![Dark Mode (Pink)](screenshots/darkmode-pink.png)
@@ -78,6 +83,10 @@ To get a local copy up and running follow these simple steps:
   ```shell
    cd PokeMart-dashboard
    npm install
+  ```
+3. **Add ur OpenAI api key in "Chatbot.jsx":**
+  ```shell
+  const API_KEY = "YOUR_API_KEY_HERE";
   ``` 
 4. **Run the application:**
   ```shell
