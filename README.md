@@ -1,4 +1,4 @@
-# Pokémon Poke Mart Dashboard
+# Pokémon Poke Mart Dashboard - With an Ash ketchum chatbot!
 
 Welcome to the Pokémon Poke Mart Dashboard project! This dashboard is designed as a comprehensive management tool for a virtual Pokémon-themed store, equipped with various features and functionalities.
 
