@@ -1,0 +1,146 @@
+Mach bike price: 100 dollars
+
+
+Event: Eruption of Magmar Volcano
+Location: Cinnabar Island
+Start Time: 2021-01-10T04:00:00.000Z
+End Time: 2021-01-10T05:30:00.000Z
+Category Color: #1aaa55
+
+Event: Lugia Air Show
+Location: Goldenrod City
+Start Time: 2021-01-11T06:30:00.000Z
+End Time: 2021-01-11T08:30:00.000Z
+Category Color: #357cd2
+
+Event: Jirachi's Wish Night
+Location: Meteor Falls
+Start Time: 2021-01-12T04:00:00.000Z
+End Time: 2021-01-12T05:30:00.000Z
+Category Color: #7fa900
+
+Event: Meteor Showers at Mt. Moon
+Location: Mt. Moon
+Start Time: 2021-01-13T07:30:00.000Z
+End Time: 2021-01-13T09:00:00.000Z
+Category Color: #ea7a57
+
+Event: Staryu Galaxy Exploration
+Location: Starfall Field
+Start Time: 2021-01-14T06:30:00.000Z
+End Time: 2021-01-14T08:30:00.000Z
+Category Color: #00bdae
+
+Event: Mysteries of Hoopa's Rings
+Location: Hoopa's Ring Isle
+Start Time: 2021-01-14T04:00:00.000Z
+End Time: 2021-01-14T05:30:00.000Z
+Category Color: #f57f17
+
+Event: Articuno's Glacial Display
+Location: Snowpoint City
+Start Time: 2021-01-15T05:30:00.000Z
+End Time: 2021-01-15T07:00:00.000Z
+Category Color: #1aaa55
+
+Event: Exploration of Marshtomp Habitats
+Location: Great Marsh
+Start Time: 2021-01-16T03:30:00.000Z
+End Time: 2021-01-16T04:30:00.000Z
+Category Color: #357cd2
+
+Event: Unown's Ancient Civilization
+Location: Ruins of Alph
+Start Time: 2021-01-18T05:30:00.000Z
+End Time: 2021-01-18T07:30:00.000Z
+Category Color: #7fa900
+
+Event: Safari Zone Wildlife Safari
+Location: Safari Zone
+Start Time: 2021-01-20T05:30:00.000Z
+End Time: 2021-01-20T07:30:00.000Z
+Category Color: #ea7a57
+
+Event: Legendary Pokémon Photography
+Location: Lake Verity
+Start Time: 2021-01-21T04:00:00.000Z
+End Time: 2021-01-21T05:30:00.000Z
+Category Color: #00bdae
+
+Event: Smarter Psyduck Observations
+Location: Celadon City
+Start Time: 2021-01-08T04:30:00.000Z
+End Time: 2021-01-08T06:00:00.000Z
+Category Color: #f57f17
+
+Event: Myths of Deoxys in Space
+Location: Space Center USA
+Start Time: 2021-01-06T05:00:00.000Z
+End Time: 2021-01-06T07:00:00.000Z
+Category Color: #1aaa55
+
+Event: Battle: Aliens vs Humans
+Location: Pewter City Research Center
+Start Time: 2021-01-05T04:30:00.000Z
+End Time: 2021-01-05T06:00:00.000Z
+Category Color: #357cd2
+
+Event: Facts of Combee Honey Collecting
+Location: Eterna Forest
+Start Time: 2021-01-19T04:00:00.000Z
+End Time: 2021-01-19T05:30:00.000Z
+Category Color: #7fa900
+
+Event: Sky Watching in Sky Pillar
+Location: Sky Pillar
+Start Time: 2021-01-22T05:30:00.000Z
+End Time: 2021-01-22T07:30:00.000Z
+Category Color: #ea7a57
+
+Event: The Cycle of Seasonal Pokémon
+Location: Seasonal Pokémon Research Lab
+Start Time: 2021-01-11T00:00:00.000Z
+End Time: 2021-01-11T02:00:00.000Z
+Category Color: #00bdae
+
+Event: Galactic Pokémon Planetary Studies
+Location: Space Center USA
+Start Time: 2021-01-11T11:30:00.000Z
+End Time: 2021-01-11T13:00:00.000Z
+Category Color: #f57f17
+
+Event: Beeheeyem's Lifecycle Exploration
+Location: Twist Mountain
+Start Time: 2021-01-14T00:30:00.000Z
+End Time: 2021-01-14T02:00:00.000Z
+Category Color: #7fa900
+
+Event: Unown's Ancient Civilization
+Location: Ruins of Alph
+Start Time: 2021-01-14T10:30:00.000Z
+End Time: 2021-01-14T12:30:00.000Z
+Category Color: #ea7a57
+
+Event: Unown's Ancient Civilization
+Location: Ruins of Alph
+Start Time: 2021-01-10T08:30:00.000Z
+End Time: 2021-01-10T10:30:00.000Z
+Category Color: #ea7a57
+
+Event: The Cycle of Seasonal Pokémon
+Location: Seasonal Pokémon Research Lab
+Start Time: 2021-01-12T09:00:00.000Z
+End Time: 2021-01-12T10:30:00.000Z
+Category Color: #00bdae
+
+Event: Sky Watching in Sky Pillar
+Location: Sky Pillar
+Start Time: 2021-01-15T09:00:00.000Z
+End Time: 2021-01-15T10:30:00.000Z
+Category Color: #ea7a57
+
+Event: Facts of Combee Honey Collecting
+Location: Eterna Forest
+Start Time: 2021-01-16T07:00:00.000Z
+End Time: 2021-01-16T09:00:00.000Z
+Category Color: #7fa900
