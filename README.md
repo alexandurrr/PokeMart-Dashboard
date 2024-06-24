@@ -4,7 +4,7 @@ Welcome to the Pokémon Poke Mart Dashboard project! This dashboard is designed 
 
 ## Features
 
-- **Chatbot using gpt-4o:** Ash ketchum themed chatbot using the latest chat gpt version. Click the chat bubble icon on the bottom right to talk to him! :)
+- **Chatbot using gpt-4o (new):** Ash ketchum themed chatbot using the latest chat gpt version. Click the chat bubble icon on the bottom right to talk to him! :)
 - **Pages:**
   - Ecommerce Home Page
   - Orders Page
@@ -32,7 +32,7 @@ Welcome to the Pokémon Poke Mart Dashboard project! This dashboard is designed 
 ## Technologies Used
 
 - **React:** Frontend library for building user interfaces.
-- **Synfusion Charts & Apps:** Used for creating a variety of interactive charts and apps.
+- **Syncfusion Charts & Apps:** Used for creating a variety of interactive charts and apps.
 - **Tailwind CSS:** Utility-first CSS framework for styling.
 - **OpenAI:** Integration for AI-powered features.
 - **Chatscope:** Component for interactive chat functionalities.
