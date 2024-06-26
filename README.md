@@ -30,12 +30,11 @@ Welcome to the Pokémon Poke Mart Dashboard project! This dashboard is designed 
 - **Music Integration:** Play the iconic Poke Mart song while using the dashboard.
 
 ## Technologies Used
-
-- **React:** Frontend library for building user interfaces.
-- **Syncfusion Charts & Apps:** Used for creating a variety of interactive charts and apps.
-- **Tailwind CSS:** Utility-first CSS framework for styling.
-- **OpenAI:** Integration for AI-powered features.
-- **Chatscope:** Component for interactive chat functionalities.
+- **[React](https://react.dev/) :** Frontend library for building user interfaces.
+- **[Syncfusion Charts & Apps](https://www.syncfusion.com/) :** Used for creating a variety of interactive charts and apps.
+- **[Tailwind CSS](https://tailwindcss.com/) :** Utility-first CSS framework for styling.
+- **[OpenAI](https://openai.com/) :** Integration for AI-powered features.
+- **[Chatscope](https://chatscope.io/) :** Component for interactive chat functionalities.
 ## Screenshots
 
 ### Homepage
