@@ -27,7 +27,7 @@ const Chatbot = () => {
     setKnowledgeBase,
   } = useStateContext();
 
-  const API_KEY = "YOUR_API_KEY_HERE";
+  const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 
   /*   useEffect(() => {
     fetch("/knowledgebase.txt")
