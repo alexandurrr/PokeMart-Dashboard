@@ -83,9 +83,9 @@ To get a local copy up and running follow these simple steps:
    cd PokeMart-dashboard
    npm install
   ```
-3. **Add ur OpenAI api key in "Chatbot.jsx":**
+3. **Configure the .env file with details API Key:**
   ```shell
-  const API_KEY = "YOUR_API_KEY_HERE";
+  REACT_APP_OPENAI_API_KEY="YOUR_API_KEY"
   ``` 
 4. **Run the application:**
   ```shell
