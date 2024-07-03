@@ -25,6 +25,7 @@ const Chatbot = () => {
     setShowMainContainer,
     knowledgeBase,
     setKnowledgeBase,
+    handleClose,
   } = useStateContext();
 
   const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
@@ -101,7 +102,10 @@ const Chatbot = () => {
   }
 
   return (
-    <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
+    <div
+      className="bg-half-transparent w-screen fixed nav-item top-0 right-0"
+      onClick={(e) => handleClose(e, setShowMainContainer)}
+    >
       <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484B52] w-400">
         <div className="flex justify-between items-center p-4 ml-4">
           <p className="font-semibold text-xl">Chatbot - Ash Ketchum</p>

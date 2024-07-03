@@ -13,8 +13,8 @@ export const ContextProvider = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(undefined);
-  const [currentColor, setCurrentColor] = useState("#03C9D7");
-  const [currentMode, setCurrentMode] = useState("Light");
+  const [currentColor, setCurrentColor] = useState("#FF5C8E");
+  const [currentMode, setCurrentMode] = useState("Dark");
   const [themeSettings, setThemeSettings] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [knowledgeBase, setKnowledgeBase] = useState("");
@@ -47,6 +47,12 @@ export const ContextProvider = ({ children }) => {
     setIsPlaying((prev) => !prev);
   };
 
+  const handleClose = (e, closeFunction) => {
+    if (e.target.classList.contains("bg-half-transparent")) {
+      closeFunction(false);
+    }
+  };
+
   return (
     <StateContext.Provider
       value={{
@@ -73,6 +79,7 @@ export const ContextProvider = ({ children }) => {
         setShowMainContainer,
         knowledgeBase,
         setKnowledgeBase,
+        handleClose,
       }}
     >
       {children}
