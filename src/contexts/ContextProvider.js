@@ -14,12 +14,25 @@ export const ContextProvider = ({ children }) => {
   const [isClicked, setIsClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(undefined);
   const [currentColor, setCurrentColor] = useState("#FF5C8E");
-  const [currentMode, setCurrentMode] = useState("Dark");
   const [themeSettings, setThemeSettings] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [knowledgeBase, setKnowledgeBase] = useState("");
   const [showMainContainer, setShowMainContainer] = useState(false);
   const [typing, setTyping] = useState(false);
+
+  const getSystemTheme = () => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      return "Dark";
+    } else {
+      return "Light";
+    }
+  };
+
+  const [currentMode, setCurrentMode] = useState(getSystemTheme);
+
   const [messages, setMessages] = useState([
     {
       message: "Hey it's Ash! What can I help ya with?",
